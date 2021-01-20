@@ -17,21 +17,25 @@ const DivPrincipal = styled.div`
   margin: 30px;
   border-radius: 10px 10px;
 `;
-
+verificaMinimo = () =>{
+  if(this.props.preco > this.state.valorMinimo){
+    return 
+  }
+}
 class App extends React.Component{
 
   render(){
     return (<FlexContainer>
     <Header/>
     <DivPrincipal>
-      <Produtos img="https://picsum.photos/250/280" item="Item A" preco="R$ 59,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item B" preco="R$ 65,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item C" preco="R$ 85,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item D" preco="R$ 100,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item E" preco="R$ 110,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item F" preco="R$ 120,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item G" preco="R$ 130,00"/>
-      <Produtos img="https://picsum.photos/250/280" item="Item H" preco="R$ 140,00"/>
+      <Produtos img="https://picsum.photos/250/280" item="A" preco={45}/>
+      <Produtos img="https://picsum.photos/250/280" item="B" preco={56}/>
+      <Produtos img="https://picsum.photos/250/280" item="C" preco={60}/>
+      <Produtos img="https://picsum.photos/250/280" item="D" preco={65}/>
+      <Produtos img="https://picsum.photos/250/280" item="E" preco={75}/>
+      <Produtos img="https://picsum.photos/250/280" item="F" preco={90}/>
+      <Produtos img="https://picsum.photos/250/280" item="G" preco={110}/>
+      <Produtos img="https://picsum.photos/250/280" item="H" preco={120}/> 
     </DivPrincipal>
     <Formulario/>
     </FlexContainer>
