@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FormStyled = styled.div`
-    height: 100vh;
+    height: 80vh;
     text-align: center;
     float: left;
-    margin: 30px;
+    margin: 20px;
     max-width: 42vw;
-    width: 30vw;
+    width: 20vw;
     box-shadow: 3px 3px 3px gray;
     background: #ffe7d0;
     border-radius: 10px 10px;

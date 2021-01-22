@@ -22,6 +22,7 @@ const Logo = styled.div`
   border-radius: 10px;
   box-shadow: 5px 5px 5px;
   margin: 60px;
+  display: inline
 `;
 
 export class Header extends React.Component{
