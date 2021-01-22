@@ -27,27 +27,8 @@ const FormStyled = styled.div`
     border-radius: 10px 10px;
 `;
 export class Formulario extends React.Component{
-    state = {
-      filtros: [{
-       valorMinimo: null,
-       valorMaximo: null,
-       buscaProduto: ''
-      }]
-    }
-
-    onChangeValorMinimo = (event) => {
-      this.setState({inputValorMinimo: event.target.value });
-    };
-
-    onChangeValorMaximo = (event) => {
-      this.setState({ inputValorMaximo: event.target.value });
-    };
-
-    onChangeBuscaProduto = (event) => {
-      this.setState({ inputBuscaProduto: event.target.value });
-    };
-
-    adicionaFiltros = () =>{
+   
+    /* adicionaFiltros = () =>{
       const novoFiltro = {
         valorMinimo: this.state.inputValorMinimo,
         valorMaximo: this.state.inputValorMaximo,
@@ -56,7 +37,7 @@ export class Formulario extends React.Component{
       const addFiltro = [...this.state.filtros, novoFiltro];
       this.setState({filtros: addFiltro})
     }
-
+ */
     render(){
 
      /* RETORNA UMA DIV COM OS ÚLTIMOS FILTROS QUE O ÚSUARIO ESCOLHEU
@@ -72,11 +53,11 @@ export class Formulario extends React.Component{
 
         return<FormStyled>
             <h1>Filtros</h1>
-            <h3>Valor minimo: <TextField value={this.state.inputValorMinimo} onChange={this.onChangeValorMinimo} id="standard-number" type="number" InputLabelProps={{shrink: true,}}/></h3>
+            <h3>Valor minimo: <TextField value={this.inputValorMinimo} onChange={this.onChangeValorMinimo} id="standard-number" type="number" InputLabelProps={{shrink: true,}}/></h3>
 
-            <h3>Valor Máximo: <TextField value={this.state.inputValorMaximo} onChange={this.onChangeValorMaximo} id="standard-number" type="number"InputLabelProps={{shrink: true,}}/></h3> 
+            <h3>Valor Máximo: <TextField value={this.inputValorMaximo} onChange={this.onChangeValorMaximo} id="standard-number" type="number"InputLabelProps={{shrink: true,}}/></h3> 
 
-            <h3>Buscar Produtos: <TextField value={this.state.inputBuscaProduto} onChange={this.onChangeBuscaProduto} id="standard-number" type="text"/></h3>
+            <h3>Buscar Produtos: <TextField value={this.inputBuscaProduto} onChange={this.onChangeBuscaProduto} id="standard-number" type="text"/></h3>
 
             <Button onClick={this.adicionaFiltros} variant="outlined" color="primary">Filtrar</Button>
 
