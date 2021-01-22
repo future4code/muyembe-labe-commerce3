@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button';
-import Formulario from './Formulario'
 
 const FlexContainer = styled.div`
-    display: flex;
+    flex-direction: row;
 `;
 const Informações = styled.div`
     font-size: 10px;
@@ -12,7 +11,7 @@ const Informações = styled.div`
 `;
 const ProdutoStyled = styled.div`
     width: 13vw;
-    height: 42vh;
+    height: 37vh;
     background: #eeeeee;
     margin: 10px;
     box-shadow: 3px 3px 3px gray;
