@@ -18,12 +18,16 @@ const Items = styled.li`
 `;
 
 export class Menu extends React.Component{
+
+    
+
     render () {
+       
         return(<FlexPrincipal>
             <DivAux>
                 <MenuStyled>
                 <Items><Button variant="contained" color="outlined"><a href="#">HOME</a></Button></Items>
-                <Items><Button variant="contained" color="outlined"><a href="#">Carrinho</a></Button></Items>
+                <Items></Items>
                 </MenuStyled>
             </DivAux>
         </FlexPrincipal>

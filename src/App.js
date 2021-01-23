@@ -5,6 +5,7 @@ import Produtos from './Components/Produtos'
 import Formulario from './Components/Formulario'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import ContainerCarrinho from './Components/ContainerCarrinho'
 
 const DivPrincipal = styled.div`
   max-width: 60vw;
@@ -28,6 +29,14 @@ const FormStyled = styled.div`
     background: #ffe7d0;
     border-radius: 10px 10px;
 `;
+
+const ImagemCarrinho = styled.img`
+  height:100px;
+  width:150px;
+  float:right;
+
+`
+
 class App extends React.Component{
   state = {
     produtos: [{
@@ -78,7 +87,8 @@ class App extends React.Component{
     inputBuscaProduto: "",
 
     listaPesquisa: [],
-    pesquisa: false
+    pesquisa: false,
+    estaCarrinho: false
     
   }
  
@@ -122,6 +132,11 @@ class App extends React.Component{
       this.setState({listaPesquisa: listaBuscaProduto, pesquisa: true})
     }
   }
+
+  mostrarProdutosCarrinho = () =>{
+   this.setState({estaCarrinho:!this.state.estaCarrinho})
+ }
+ 
   
   render(){
   
@@ -147,7 +162,8 @@ class App extends React.Component{
         )
       })
     }
-    
+
+  
     
 
     // <Produtos img={produt.img} item={produt.item} preco={produt.preco}/>
@@ -157,12 +173,22 @@ class App extends React.Component{
     }) */
     return (
       <div>
+        
+        <Header>
+           
+        </Header>
+        <ImagemCarrinho src={"https://miro.medium.com/max/572/1*sTiCK-rsyI7vgiqwX3D6ng.jpeg"} onClick={this.mostrarProdutosCarrinho}/>            
+        
 
-        <Header/>
-
+       
+       
         <DivPrincipal>
           {listaDeProdutos}
         </DivPrincipal>
+
+        {this.state.estaCarrinho?<ContainerCarrinho/>:""}
+
+        
 
         <FormStyled>
 
