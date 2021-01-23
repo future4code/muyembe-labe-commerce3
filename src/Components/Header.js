@@ -26,6 +26,7 @@ const Logo = styled.div`
 
 export class Header extends React.Component{
     render(){
+        
         return <HeaderStyled>
             <Logo><a href="#"><h2>LabeCommerce</h2></a></Logo>
             <Menu/>
